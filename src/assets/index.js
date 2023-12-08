@@ -20,6 +20,8 @@ import communication from './communication.svg';
 import idCard from './idCard.svg';
 import fluent_ticket from './fluent_ticket.svg';
 import carbon_warning from './carbon_warning.svg';
+import csv from './csv.svg';
+import excel from './excel.svg';
 
 export {
   bank,
@@ -43,5 +45,7 @@ export {
   fluent_ticket,
   carbon_warning,
   trendUp,
+  csv,
+  excel,
   graph,
 };

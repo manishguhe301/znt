@@ -8,7 +8,7 @@ import ConsumerOverview from '../components/ConsumerOverview';
 const RightSection = () => {
   const { isManageConsumersClicked } = useContext(ManageConsumersContext);
   return (
-    <div className='p-8 w-[100%]'>
+    <div className='p-8 w-[100%] overflow-scroll '>
       <NavBar />
       <Hero />
       <p className='font-[Lato] text-lg font-medium mb-3 mt-6'>

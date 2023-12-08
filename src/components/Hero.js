@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import {
   communication,
   idCard,
@@ -26,11 +27,27 @@ const Hero = () => {
         <div className=''>
           <div className='flex justify-between  items-center'>
             <div>
-              <p className='font-[Lato] text-2xl text-black  font-medium mb-2'>
-                Hello Shakir!
-              </p>
+              {!isManageConsumersClicked ? (
+                <p className='font-[Lato] text-2xl text-black  font-medium mb-2'>
+                  Hello Shakir!
+                </p>
+              ) : (
+                <p
+                  className='font-[Lato] text-base text-[#1FB9FC] cursor-pointer font-medium'
+                  onClick={() => {
+                    setIsManageConsumersClicked(!isManageConsumersClicked);
+                  }}
+                >
+                  Consumer
+                  <NavigateNextIcon />
+                  Manage Consumers
+                </p>
+              )}
               <p className='text-[#7B7B7E] text-sm font-normal font-[Lato]'>
-                You have 134 consumers this week.
+                {!isManageConsumersClicked
+                  ? 'You have 134 consumers this week'
+                  : 'Actions'}
+                .
               </p>
             </div>
             <img src={communication} alt='communication' className='h-20' />
@@ -43,16 +60,18 @@ const Hero = () => {
               <PersonAddAlt1Icon />
               Add Consumers
             </button>
-            <button
-              className=' text-[12px] rounded font-[Lato] font-semibold text-[#313945] h-9 flex justify-center items-center gap-2 bg-[#fff] border-[1px] border-[#313945]'
-              style={{ padding: '5px 6px' }}
-              onClick={() => {
-                setIsManageConsumersClicked(!isManageConsumersClicked);
-              }}
-            >
-              <ManageAccountsIcon />
-              Manage Consumers
-            </button>
+            {!isManageConsumersClicked && (
+              <button
+                className=' text-[12px] rounded font-[Lato] font-semibold text-[#313945] h-9 flex justify-center items-center gap-2 bg-[#fff] border-[1px] border-[#313945]'
+                style={{ padding: '5px 6px' }}
+                onClick={() => {
+                  setIsManageConsumersClicked(!isManageConsumersClicked);
+                }}
+              >
+                <ManageAccountsIcon />
+                Manage Consumers
+              </button>
+            )}
           </div>
         </div>
       </div>
