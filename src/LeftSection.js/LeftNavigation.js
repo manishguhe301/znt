@@ -10,7 +10,7 @@ const LeftNavigation = () => {
   return (
     <div className='w-[260px] bg-[#F6FAFC] p-1'>
       <img src={logo} alt='logo' className='ml-6 pt-12' />
-      <div className='mt-16 ml-6'>
+      <div className='mt-16 ml-6 cursor-pointer'>
         {navLinks.map((link) => (
           <NavLink link={link} />
         ))}

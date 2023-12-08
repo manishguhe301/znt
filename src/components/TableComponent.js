@@ -20,7 +20,7 @@ const TableComponent = () => {
 
   return (
     <div>
-      <div className='w-[100%] overflow-x-scroll max-h-[500px]'>
+      <div className='w-[100%] overflow-x-scroll max-h-[700px]'>
         <table className='w-[1360px] overflow-x-auto h-[500px]'>
           <thead className='h-[50px] bg-[#DDEBFF] p-5 font-[Lato] text-sm sticky top-0 z-50'>
             <th className='text-start pl-2 w-[169px]'>Consumer Name</th>
