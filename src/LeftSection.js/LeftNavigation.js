@@ -12,7 +12,7 @@ const LeftNavigation = () => {
       <img src={logo} alt='logo' className='ml-6 pt-12' />
       <div className='mt-16 ml-6 cursor-pointer'>
         {navLinks.map((link) => (
-          <NavLink link={link} />
+          <NavLink link={link} key={link.label} />
         ))}
       </div>
       <div className='mt-16 ml-6 pb-24'>
@@ -34,7 +34,7 @@ const LeftNavigation = () => {
           />
           <div className='h-28 w-48 bg-[#FFFFFF] rounded-lg pl-4 pt-4 pr-2'>
             {stockGrams.map((stock) => (
-              <StockGram stock={stock} />
+              <StockGram stock={stock} key={stock.name} />
             ))}
           </div>
         </div>
